@@ -1,0 +1,10 @@
+Difficulty
+Game difficulty will range from 1-9. In Sudoku, game difficulty
+seems to be proportional to the number of values already filled in.
+An easy difficulty will rely on giving the player a nearly filled board 
+and vice versa for harder difficulties. Of course, the player will choose
+their level of difficulty. The motivation for using values 1-9 is derived 
+from its divisability with the total number of squares, 81. If x is the 
+inputted difficulty, level one could hypothetically consist a lower bound of 
+81/x and an upper bound of (81/x) - 5 values given. Generating a random value 
+within these restrictions will make the filled values dynamic.
