@@ -1,3 +1,6 @@
+Data Structure
+Adjacency list will be used, which contains V+E values. 
+
 Difficulty
 Game difficulty will range from 1-9. In Sudoku, game difficulty
 seems to be proportional to the number of values already filled in.
@@ -8,3 +11,15 @@ from its divisability with the total number of squares, 81. If x is the
 inputted difficulty, level one could hypothetically consist a lower bound of 
 81/x and an upper bound of (81/x) - 5 values given. Generating a random value 
 within these restrictions will make the filled values dynamic.
+
+Game Rules
+The goal is to have no identical entry in any row and column. Each Sudoku board is 
+made up of a smaller subset of squares. For example, the entire board is made up 
+out of 9x9 squares. Consisting mainly of 9 3x3 squares, each square must not have the same
+value either. 
+
+Implementation 
+We are concerned with confirming whether an entry already exists on a single row and column. 
+We want to implement an efficient search operation using a suitable container to preserve the state 
+of the game. The proposed design is an adjacency list. For the user, only values 1-9 can be chosen. 
+The number of possible choices is small and static, thus an array of size 9 is suitable. 
